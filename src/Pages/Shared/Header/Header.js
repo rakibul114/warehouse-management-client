@@ -1,18 +1,31 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Header.css';
+import logo from '../../../images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          sticky="top"
+          bg="light"
+          variant="light"
+        >
           <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/">
+              <div className='d-flex align-items-center justify-content-center'>
+                <img height={40} src={logo} alt="" />{" "}
+                <span className="fs-1">Scentitude</span>
+              </div>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Nav.Link href="home">Home</Nav.Link>
+                <Nav.Link href="home#products">Products</Nav.Link>
                 <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
