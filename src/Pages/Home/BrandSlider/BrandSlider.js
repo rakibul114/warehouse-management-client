@@ -1,9 +1,9 @@
 import React from "react";
 import './BrandSlider.css';
 
-import slide1 from "../../../images/brands/img1.PNG";
-import slide2 from "../../../images/brands/img2.PNG";
-import slide3 from "../../../images/brands/img3.PNG";
+import img1 from '../../../images/brands/img11.PNG';
+import img2 from '../../../images/brands/img13.PNG';
+import img3 from '../../../images/brands/img14.PNG';
 
 const BrandSlider = () => {
   return (
@@ -38,13 +38,13 @@ const BrandSlider = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="10000">
-            <img src={slide1} className="d-block w-25 mx-auto" alt="..." />
+            <img src={img1} className="d-block w-25 mx-auto" alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src={slide2} className="d-block w-25 mx-auto" alt="..." />
+            <img src={img2} className="d-block w-25 mx-auto" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={slide3} className="d-block w-25 mx-auto" alt="..." />
+            <img src={img3} className="d-block w-25 mx-auto" alt="..." />
           </div>
         </div>
         <button

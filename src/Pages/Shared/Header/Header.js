@@ -10,13 +10,13 @@ const Header = () => {
         <Navbar
           collapseOnSelect
           expand="lg"
-          sticky="top"
           bg="light"
+          sticky="top"
           variant="light"
         >
           <Container>
             <Navbar.Brand as={Link} to="/">
-              <div className='d-flex align-items-center justify-content-center'>
+              <div className="d-flex align-items-center justify-content-center">
                 <img height={40} src={logo} alt="" />{" "}
                 <span className="fs-1">Scentitude</span>
               </div>
@@ -24,9 +24,9 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="home">Home</Nav.Link>
-                <Nav.Link href="home#products">Products</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                <Nav.Link href="home" className='fs-5'>Home</Nav.Link>
+                <Nav.Link href="home#products" className='fs-5'>Products</Nav.Link>
+                <NavDropdown title="Dropdown" id="collasible-nav-dropdown" className='fs-5'>
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
@@ -41,9 +41,9 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
               <Nav>
-                <Nav.Link href="#deets">More deets</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                  Dank memes
+                <Nav.Link href="#deets" className='fs-5'>About Us</Nav.Link>
+                <Nav.Link as={Link} to="/login" className='fs-5'>
+                  Login
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
