@@ -8,9 +8,17 @@ import quickReply from "../../../images/quick-reply.svg";
 const Support = () => {
     return (
       <div className="support-container">
-        <img width={350} src={delivery} alt="" />
-        <img width={350} src={cashOnDelivery} alt="" />
-        <img width={350} src={quickReply} alt="" />
+        <div className="container support-inner-container row-cols-1 row-cols-md-1 row-cols-lg-3">
+          <div className='col'>
+            <img width={300} src={delivery} alt="" />
+          </div>
+          <div className='col'>
+            <img width={300} src={cashOnDelivery} alt="" />
+          </div>
+          <div className='col'>
+            <img width={300} src={quickReply} alt="" />
+          </div>
+        </div>
       </div>
     );
 };
