@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "626cb81179f897764b6b3e92",
+    "picture": "https://i.ibb.co/CmfKG8z/armani.png",
+    "price": 20,
+    "quantity": 38,
+    "name": "Giorgio Armani",
+    "description": "Ex cupidatat incididunt excepteur ea ipsum. Aliqua et proident ullamco labore. Nostrud et cupidatat minim quis. Dolore occaecat occaecat ut enim voluptate aliqua do reprehenderit. Eu cupidatat elit laborum mollit enim.\r\n",
+    "supplier": "Armani"
+  },
+  {
+    "_id": "626cb811cfbb5635d4b62e75",
+    "picture": "https://i.ibb.co/RvCLk9n/creed.png",
+    "price": 20,
+    "quantity": 37,
+    "name": "Creed Aventus",
+    "description": "Tempor ad veniam excepteur id eu laborum veniam. Lorem magna quis nostrud ut laborum. Est nisi dolore sint quis. Cupidatat Lorem qui est velit et laborum. Exercitation aliqua tempor ut cupidatat esse amet laborum et aliquip cillum.\r\n",
+    "supplier": "Creed"
+  },
+  {
+    "_id": "626cb811acab38256003aa4f",
+    "picture": "https://i.ibb.co/9rg7mkv/dolce.png",
+    "price": 28,
+    "quantity": 21,
+    "name": "Dolce & Gabbana",
+    "description": "Nostrud incididunt adipisicing ex consequat qui irure et esse proident do est. Mollit qui ea laborum laborum et voluptate amet in est commodo elit pariatur. Veniam proident pariatur aute tempor aute.\r\n",
+    "supplier": "Dolce"
+  },
+  {
+    "_id": "626cb8112bddb3b4a396f3f0",
+    "picture": "https://i.ibb.co/g6T8f1B/tom-orchid.png",
+    "price": 24,
+    "quantity": 27,
+    "name": "Tom Ford Black Orchid",
+    "description": "Eu esse aliqua esse dolor dolore do consectetur cillum ea deserunt excepteur duis. Sint proident adipisicing sunt ad amet exercitation elit. Ex exercitation magna elit pariatur aliqua id deserunt sunt ullamco aute sunt.\r\n",
+    "supplier": "Tom Ford"
+  },
+  {
+    "_id": "626cb811e62d66d420fb6cb2",
+    "picture": "https://i.ibb.co/qxtxCWp/tom-private.png",
+    "price": 23,
+    "quantity": 35,
+    "name": "Tom Ford Private Blend",
+    "description": "Dolore irure voluptate anim commodo sunt. Culpa exercitation dolore amet reprehenderit aute mollit qui consectetur tempor elit dolor duis. Minim non do nostrud ea ea cillum incididunt minim eu eiusmod do ex ad.\r\n",
+    "supplier": "Tom Ford"
+  },
+  {
+    "_id": "626cb8117e574723a78b6c02",
+    "picture": "https://i.ibb.co/TmvZdXt/roja.png",
+    "price": 36,
+    "quantity": 22,
+    "name": "Roja Elysium",
+    "description": "Eiusmod proident laborum in ea in pariatur officia. Nulla deserunt quis ex adipisicing. Commodo labore cupidatat voluptate adipisicing do consequat velit et laborum.\r\n",
+    "supplier": "Roja"
+  }
+]
