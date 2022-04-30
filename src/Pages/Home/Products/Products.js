@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import Product from '../Product/Product';
 import './Products.css';
 
@@ -15,8 +14,8 @@ const Products = () => {
 
     return (
       <div className="container">
-        <h1 className="text-center">Perfume collection:</h1>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <h1 className="products-title text-center">Perfume collection</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
           {products.map((product) => (
             <Product key={product._id} product={product}></Product>
           ))}
