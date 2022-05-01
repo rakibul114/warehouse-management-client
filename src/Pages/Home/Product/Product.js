@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Product.css";
 
 const Product = (props) => {
-    const { name, picture, price, quantity, description, supplier } = props.product;
-    
+  const { _id, name, picture, price, quantity, description, supplier } = props.product;
+  const navigate = useNavigate();
+      
+  const navigateToInventoryDetail = id => {
+    navigate(`/product/${id}`);
+  };
+  
   return (
     <div className="col">
       <div className="card shadow-sm rounded">
@@ -20,7 +26,12 @@ const Product = (props) => {
           <p>
             <b>Supplier:</b> {supplier}
           </p>
-          <button className="btn btn-primary">UPDATE</button>
+          <button
+            onClick={() => navigateToInventoryDetail(_id)}
+            className="btn btn-primary"
+          >
+            UPDATE
+          </button>
         </div>
       </div>
     </div>
