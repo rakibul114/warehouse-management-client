@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   if (user) {
-    navigate('/');
+    navigate('/home');
   }
 
   const handleLogin = event => {
