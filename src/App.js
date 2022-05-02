@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home/Home';
 import Products from './Pages/Home/Products/Products';
-import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
+import ProductDetail from './Pages/ProductDetail/ProductDetail';
 import AddItem from './Pages/Items/AddItem/AddItem';
 import ManageItems from './Pages/Items/ManageItems/ManageItems';
 import MyItems from './Pages/Items/MyItems/MyItems';
@@ -25,7 +25,7 @@ function App() {
           path="/product/:productId"
           element={
             <RequireAuth>
-              <InventoryDetail></InventoryDetail>
+              <ProductDetail></ProductDetail>
             </RequireAuth>
           }
         ></Route>

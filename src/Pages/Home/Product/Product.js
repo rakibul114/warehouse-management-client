@@ -6,7 +6,7 @@ const Product = (props) => {
   const { _id, name, picture, price, quantity, description, supplier } = props.product;
   const navigate = useNavigate();
       
-  const navigateToInventoryDetail = id => {
+  const navigateToProductDetail = id => {
     navigate(`/product/${id}`);
   };
   
@@ -27,7 +27,7 @@ const Product = (props) => {
             <b>Supplier:</b> {supplier}
           </p>
           <button
-            onClick={() => navigateToInventoryDetail(_id)}
+            onClick={() => navigateToProductDetail(_id)}
             className="btn btn-primary"
           >
             UPDATE

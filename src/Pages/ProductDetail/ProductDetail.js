@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import useProductDetail from '../../hooks/useProductDetail';
 
-const InventoryDetail = () => {
+const ProductDetail = () => {  
     const { productId } = useParams();
+  const [product] = useProductDetail(productId);
     const navigate = useNavigate();
 
     const navigateToManageInventory = () => {
@@ -11,7 +13,7 @@ const InventoryDetail = () => {
 
     return (
       <div>
-        <h3>Inventory Details Id: {productId}</h3>
+        <h3>Inventory Details Id: {product.name}</h3>
         <div className="text-center">
           <button
             onClick={navigateToManageInventory}
@@ -24,4 +26,4 @@ const InventoryDetail = () => {
     );
 };
 
-export default InventoryDetail;
+export default ProductDetail;
