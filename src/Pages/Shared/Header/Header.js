@@ -33,9 +33,17 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="home" className='fs-5'>Home</Nav.Link>
-                <Nav.Link href="home#products" className='fs-5'>Products</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown" className='fs-5'>
+                <Nav.Link href="home" className="fs-5">
+                  Home
+                </Nav.Link>
+                <Nav.Link href="home#products" className="fs-5">
+                  Products
+                </Nav.Link>
+                <NavDropdown
+                  title="Dropdown"
+                  id="collasible-nav-dropdown"
+                  className="fs-5"
+                >
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
                     Another action
@@ -50,14 +58,35 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
               <Nav>
-                <Nav.Link href="#deets" className='fs-5'>About Us</Nav.Link>
-                {
-                  user ?
-                    <button className='btn btn-link text-decoration-none fs-5 border' onClick={handleSignOut}>Sign Out</button>
-                    :
-                  <Nav.Link as={Link} to="/login" className='fs-5'>
-                  Login
-                </Nav.Link>}
+                <Nav.Link href="#deets" className="fs-5">
+                  About Us
+                </Nav.Link>
+                {user && (
+                  <>
+                    <Nav.Link className="fs-5" as={Link} to="/additems">
+                      Add Item
+                    </Nav.Link>
+                    <Nav.Link className="fs-5" as={Link} to="/manage">
+                      Manage Items
+                    </Nav.Link>
+                    <Nav.Link className="fs-5" as={Link} to="/myitems">
+                      My Items
+                    </Nav.Link>
+                  </>
+                )}
+
+                {user ? (
+                  <button
+                    className="btn btn-link text-decoration-none fs-5 border"
+                    onClick={handleSignOut}
+                  >
+                    Sign Out
+                  </button>
+                ) : (
+                  <Nav.Link as={Link} to="/login" className="fs-5">
+                    Login
+                  </Nav.Link>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>

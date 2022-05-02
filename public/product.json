@@ -52,5 +52,33 @@
     "name": "Roja Elysium",
     "description": "Eiusmod proident laborum in ea in pariatur officia. Nulla deserunt quis ex adipisicing. Commodo labore cupidatat voluptate adipisicing do consequat velit et laborum.\r\n",
     "supplier": "Roja"
+  },
+  {
+    "_id": "626cb8127e575722a78c6c08",
+    "picture": "https://i.ibb.co/f1Q2TgP/sauvage.png",
+    "price": 45,
+    "quantity": 12,
+    "name": "Dior Sauvage",
+    "description": "Eiusmod proident laborum in ea in pariatur officia. Nulla deserunt quis ex adipisicing. Commodo labore cupidatat voluptate adipisicing do consequat velit et laborum.\r\n",
+    "supplier": "Dior"
+  },
+  
+  {
+    "_id": "626cb7127e505722a79c5c01",
+    "picture": "https://i.ibb.co/L6TgcVg/gentleman.png",
+    "price": 55,
+    "quantity": 8,
+    "name": "Gentleman Givenchy",
+    "description": "Eiusmod proident laborum in ea in pariatur officia. Nulla deserunt quis ex adipisicing. Commodo labore cupidatat voluptate adipisicing do consequat velit et laborum.\r\n",
+    "supplier": "Givenchy"
+  },
+  {
+    "_id": "626ca7136e505762h79c5c09",
+    "picture": "https://i.ibb.co/BjdFw2H/linterdit.png",
+    "price": 65,
+    "quantity": 15,
+    "name": "Givenchy Linterdit",
+    "description": "Eiusmod proident laborum in ea in pariatur officia. Nulla deserunt quis ex adipisicing. Commodo labore cupidatat voluptate adipisicing do consequat velit et laborum.\r\n",
+    "supplier": "Givenchy"
   }
 ]
