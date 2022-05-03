@@ -30,7 +30,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/additems"
+          path="/additem"
           element={
             <RequireAuth>
               <AddItem></AddItem>
