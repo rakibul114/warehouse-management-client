@@ -15,7 +15,7 @@ root.render(
   </BrowserRouter>
 );
 // for loading spinner home page
-debugger;
+// debugger;
 // for loading spinner home page
 
 // If you want to start measuring performance in your app, pass a function

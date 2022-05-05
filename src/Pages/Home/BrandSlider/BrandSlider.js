@@ -3,21 +3,20 @@ import './BrandSlider.css';
 import { Carousel } from "react-bootstrap";
 
 
-import img1 from '../../../images/brands/img1.PNG';
-import img2 from '../../../images/brands/img2.PNG';
-import img3 from '../../../images/brands/img3.PNG';
-import img4 from '../../../images/brands/img4.PNG';
-import img5 from '../../../images/brands/img5.PNG';
-import img6 from '../../../images/brands/img6.PNG';
-import img7 from '../../../images/brands/img7.PNG';
-import img8 from '../../../images/brands/img8.PNG';
-import img9 from '../../../images/brands/img9.PNG';
-import img10 from '../../../images/brands/img10.PNG';
-import img11 from '../../../images/brands/img11.PNG';
-import img12 from '../../../images/brands/img12.PNG';
-import img13 from '../../../images/brands/img13.PNG';
-import img14 from '../../../images/brands/img14.PNG';
-import img15 from '../../../images/brands/img15.PNG';
+import img1 from '../../../images/brands/img1.png';
+import img2 from '../../../images/brands/img2.png';
+import img3 from '../../../images/brands/img3.png';
+import img4 from '../../../images/brands/img4.png';
+import img5 from '../../../images/brands/img5.png';
+import img6 from '../../../images/brands/img6.png';
+import img7 from '../../../images/brands/img7.png';
+import img8 from '../../../images/brands/img8.png';
+import img9 from '../../../images/brands/img9.png';
+import img10 from '../../../images/brands/img10.png';
+import img11 from '../../../images/brands/img11.png';
+import img12 from '../../../images/brands/img12.png';
+import img13 from '../../../images/brands/img13.png';
+
 
 
 
@@ -84,12 +83,7 @@ const BrandSlider = () => {
           <Carousel.Item>
             <img className="d-block w-100" src={img13} alt="Thirteenth slide" />
           </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={img14} alt="Fourteenth slide" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={img15} alt="Fifteenth slide" />
-          </Carousel.Item>
+          
         </Carousel>
       </div>
     </div>
