@@ -4,14 +4,31 @@ import useProductDetail from '../../hooks/useProductDetail';
 import './ProductDetail.css';
 
 const ProductDetail = () => {  
-    const { productId } = useParams();
-  const [product] = useProductDetail(productId);
+  const { productId } = useParams();
+  const [product, setProduct] = useProductDetail(productId);  
+  
+  const { quantity } = product;
   
     const navigate = useNavigate();
-
     const navigateToManageInventory = () => {
       navigate("/manage");
-    };
+  };
+  
+  // event handler for delivered button
+  const handleQuantity = () => {
+    let newQuantity = quantity - 1;
+    const newProduct = { ...product, quantity: newQuantity };
+    setProduct(newProduct);
+    const url = `http://localhost:5000/product/${productId}`;
+    console.log(url);
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    });
+  };
 
     return (
       <div className="container">
@@ -35,8 +52,14 @@ const ProductDetail = () => {
             </p>
             <p>{product.description}</p>
           </div>
-          <div className="d-flex justify-content-center">
-            <button className="w-50 btn btn-primary mt-3">Delivered</button>
+          <div className="text-center mt-4">
+            <button className="btn btn-success me-3">Add to My Items</button>
+            <button
+              onClick={() => handleQuantity(productId)}
+              className="btn btn-primary"
+            >
+              Delivered
+            </button>
           </div>
         </div>
 

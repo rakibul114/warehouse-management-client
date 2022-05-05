@@ -12,6 +12,10 @@ import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import About from './Pages/About/About';
+import Blogs from './Pages/Blogs/Blogs';
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
@@ -21,6 +25,8 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/products" element={<Products></Products>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/product/:productId"
           element={
@@ -58,6 +64,8 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
+      
     </div>
   );
 }

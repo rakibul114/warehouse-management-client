@@ -3,6 +3,9 @@ import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 import './ManageItems.css';
+// for toast
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const ManageItems = () => {
@@ -11,6 +14,24 @@ const ManageItems = () => {
 
   const navigateToAddItem = () => {
     navigate("/additem");
+  };
+
+  // Delete a product from manage items page
+  const handleDelete = id => {
+    const proceed = window.confirm('Are you sure?');
+    if (proceed) {
+      const url = `http://localhost:5000/product/${id}`;
+      fetch(url, {
+        method: 'DELETE'
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          const remaining = products.filter(product => product._id !== id);
+          setProducts(remaining);
+          toast('Your item has been deleted');
+        });
+    }
   };
 
 
@@ -39,7 +60,12 @@ const ManageItems = () => {
                     </td>
                     <td width={100}>{product.supplier}</td>
                     <td className="text-center" width={50}>
-                      <button className="delete-button">DELETE</button>
+                      <button
+                        onClick={() => handleDelete(product._id)}
+                        className="delete-button"
+                      >
+                        DELETE
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -47,9 +73,11 @@ const ManageItems = () => {
             </Table>
           </div>
         </div>
-        <div className='text-center mt-4'>
-          <button onClick={navigateToAddItem} className='btn btn-primary px-5'>Add New Item</button>
-        </div>
+        <div className="text-center mt-4">
+          <button onClick={navigateToAddItem} className="btn btn-primary px-5">
+            Add New Item
+          </button>
+        </div>        
       </div>
     );
 };

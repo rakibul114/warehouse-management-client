@@ -6,12 +6,12 @@ import Support from '../Support/Support';
 
 const Home = () => {
     return (
-        <div>
-            <Banner></Banner>
-            <Products></Products>
-            <BrandSlider></BrandSlider>
-            <Support></Support>
-        </div>
+      <div>
+        <Banner></Banner>
+        <Products></Products>        
+        <BrandSlider></BrandSlider>
+        <Support></Support>
+      </div>
     );
 };
 

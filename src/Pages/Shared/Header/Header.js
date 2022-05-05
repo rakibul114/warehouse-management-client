@@ -58,12 +58,15 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
               <Nav>
-                <Nav.Link href="#deets" className="fs-5">
+                <Nav.Link as={Link} to="/about" className="fs-5">
                   About Us
+                </Nav.Link>
+                <Nav.Link as={Link} to="/blogs" className="fs-5">
+                  Blogs
                 </Nav.Link>
                 {user && (
                   <>
-                    <Nav.Link className="fs-5" as={Link} to="/additems">
+                    <Nav.Link className="fs-5" as={Link} to="/additem">
                       Add Item
                     </Nav.Link>
                     <Nav.Link className="fs-5" as={Link} to="/manage">
