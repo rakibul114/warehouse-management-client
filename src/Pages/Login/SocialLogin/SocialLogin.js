@@ -4,7 +4,7 @@ import { useSignInWithFacebook, useSignInWithGoogle } from "react-firebase-hooks
 import googleIcon from '../../../images/google.png';
 import facebookIcon from '../../../images/facebook.png';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SocialLogin = () => {
@@ -12,6 +12,7 @@ const SocialLogin = () => {
   const [signInWithFacebook, userFb, loadingFb, errorFb] =
     useSignInWithFacebook(auth);
   const navigate = useNavigate();
+  const location = useLocation();
   
   let errorElement;
     if (error || errorFb) {
@@ -19,11 +20,12 @@ const SocialLogin = () => {
         (<div>
         <p className='text-danger'>Error: {error?.message} {errorFb?.message}</p>
         </div>);
-      
   }
   
+  let from = location.state?.from?.pathname || "/";
+  
   if (user || userFb) {
-    navigate('/home');
+    navigate(from, { replace: true });
   }
 
     return (
