@@ -1,11 +1,12 @@
 .footer-container{
     width: 100%;
+    background-color: #000000b8;
 }
-.footer-style{
-    background-color: #000000;
+.footer-style{    
     color: #ffffff;
     height: 100%;
     width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content:space-between;        
 }
