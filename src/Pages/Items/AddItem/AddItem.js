@@ -15,7 +15,7 @@ const AddItem = () => {
     );
     
     // Post/add data to database and (UI)
-    const url = `http://localhost:5000/product`;
+    const url = `http://localhost:5000/item`;
     fetch(url, {
       method: 'POST',
       headers: {
