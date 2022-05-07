@@ -62,7 +62,7 @@ const ManageItems = () => {
                     <td className="text-center" width={50}>
                       <button
                         onClick={() => handleDelete(product._id)}
-                        className="delete-button"
+                        className="delete-button px-3 py-1"
                       >
                         DELETE
                       </button>

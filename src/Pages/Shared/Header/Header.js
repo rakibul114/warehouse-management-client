@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
 
+
 const Header = () => {
   const [user] = useAuthState(auth);
+  
   
   const handleSignOut = () => {
     signOut(auth);
@@ -20,7 +22,7 @@ const Header = () => {
           collapseOnSelect
           expand="lg"
           bg="light"
-          sticky="top"
+          sticky="bottom"
           variant="light"
         >
           <Container>
@@ -89,7 +91,7 @@ const Header = () => {
                   <Nav.Link as={Link} to="/login" className="fs-5">
                     Login
                   </Nav.Link>
-                )}
+                )}                
               </Nav>
             </Navbar.Collapse>
           </Container>

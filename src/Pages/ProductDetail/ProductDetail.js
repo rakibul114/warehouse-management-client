@@ -13,9 +13,7 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useProductDetail(productId);
   const [user] = useAuthState(auth);
-  if (user) {
-    console.log(user);
-  }
+  
   
   const [addQuantity, setAddQuantity] = useState(1);
   
