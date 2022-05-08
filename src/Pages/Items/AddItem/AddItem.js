@@ -5,30 +5,56 @@ import { useNavigate } from 'react-router-dom';
 // for toast
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import axios from 'axios';
 
-const AddItem = () => {
+
+const AddItem = () => {   
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
+  const [user] = useAuthState(auth);
 
   const onSubmit = (data) => {
-    console.log(data
-    );
+    console.log(data);
+    const addItem = {
+      id: data._id,
+      supplier: data.supplier,
+      price: data.price,
+      description: data.description,
+      image: data.picture,
+      quantity: data.quantity,
+      name: data.name,      
+      email: user.email,
+    };
+
     
     // Post/add data to database and (UI)
-    const url = `http://localhost:5000/item`;
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(result => {
-        console.log(result);
-        toast('Your item has been added');
-      });
-    reset();
+    axios.post("http://localhost:5000/myitem", addItem).then((response) => {
+      const { data } = response;
+      if (data.insertedId) {
+        toast("Your item has been added");
+      }
+      reset();
+    });
+
+    //............................................
+
+    // const url = `http://localhost:5000/myitem`;
+    // fetch(url, {
+    //   method: 'POST',
+    //   headers: {
+    //     'content-type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     console.log(result);
+    //     toast('Your item has been added');
+    //   });
+    // reset();
+
   };
 
   const navigateToManage = () => {

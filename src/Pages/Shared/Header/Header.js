@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
       <div>
-        <Navbar
+        <Navbar className='py-4'
           collapseOnSelect
           expand="lg"
           bg="light"

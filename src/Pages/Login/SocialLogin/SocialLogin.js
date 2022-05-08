@@ -8,8 +8,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SocialLogin = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [signInWithFacebook, userFb, loadingFb, errorFb] =
+  const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
+  const [signInWithFacebook, userFb, errorFb] =
     useSignInWithFacebook(auth);
   const navigate = useNavigate();
   const location = useLocation();

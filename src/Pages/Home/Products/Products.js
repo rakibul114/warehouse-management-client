@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useProducts from "../../../hooks/useProducts";
 import Product from "../Product/Product";
 import "./Products.css";
 
 const Products = () => {
-  const [products, setProducts] = useProducts();
+  const [products] = useProducts();
   const navigate = useNavigate();
   
 

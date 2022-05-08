@@ -59,7 +59,7 @@ const ProductDetail = () => {
       userName: user.displayName,
       email: user.email,
     };
-    axios.post("http://localhost:5000/item", item).then((response) => {
+    axios.post("http://localhost:5000/product", item).then((response) => {
       const { data } = response;
       if (data.insertedId) {
         toast('Your item is updated');

@@ -8,7 +8,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
-    const [createUserWithEmailAndPassword, user, loading, error] =
+    const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   
     const [agree, setAgree] = useState(false);
@@ -27,7 +27,7 @@ const Register = () => {
 
     const handleRegister = event => {
         event.preventDefault();
-        const name = nameRef.current.value;
+        // const name = nameRef.current.value;
         const email = emailRef.current.value;
       const password = passwordRef.current.value;
       if (!agree) {
