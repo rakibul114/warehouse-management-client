@@ -5,12 +5,14 @@ import googleIcon from '../../../images/google.png';
 import facebookIcon from '../../../images/facebook.png';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../../hooks/useToken';
 
 
 const SocialLogin = () => {
   const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
   const [signInWithFacebook, userFb, errorFb] =
     useSignInWithFacebook(auth);
+  const [token] = useToken(user || userFb);
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -24,7 +26,7 @@ const SocialLogin = () => {
   
   let from = location.state?.from?.pathname || "/";
   
-  if (user || userFb) {
+  if (token) {
     navigate(from, { replace: true });
   }
 

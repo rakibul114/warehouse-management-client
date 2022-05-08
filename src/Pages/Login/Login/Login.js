@@ -8,6 +8,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
@@ -16,6 +17,7 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  const [token] = useToken(user);
 
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -28,8 +30,8 @@ const Login = () => {
     return <Loading></Loading>;
   }
 
-  if (user) {
-    // navigate(from, { replace: true });
+  if (token) {
+    navigate(from, { replace: true });
   }
 
   let errorElement;
@@ -48,13 +50,7 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
-    // jwt (login)
-    const { data } = await axios.post(
-      "https://mighty-shelf-89768.herokuapp.com/login",
-      { email }
-    );
-    localStorage.setItem("accessToken", data.accessToken);
-    navigate(from, { replace: true });
+    
   };
 
   const resetPassword = async () => {

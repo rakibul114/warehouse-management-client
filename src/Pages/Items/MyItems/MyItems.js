@@ -14,7 +14,7 @@ const MyItems = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const getItems = async () => {
-      const email = user.email;
+      const email = user?.email;
       const url = `https://mighty-shelf-89768.herokuapp.com/myitem?email=${email}`;
       try {
         const { data } = await axiosPrivate.get(url);
