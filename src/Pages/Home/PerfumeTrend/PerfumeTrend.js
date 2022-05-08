@@ -10,7 +10,7 @@ const PerfumeTrend = () => {
         <div className="mothers-day mt-5">
           <div className="row gx-5 d-flex align-items-center justify-content-center">
             <div className="col">
-              <img src={momBanner} alt="" />
+              <img className="img-fluid" src={momBanner} alt="" />
             </div>
             <div className="col">
               <h2>BEST PERFUME FOR MOTHER'S DAY</h2>
@@ -53,7 +53,7 @@ const PerfumeTrend = () => {
               <p className="fs-2">SPRING PERFUMES FOR MEN</p>
             </div>
             <div className="col">
-              <img src={springBanner} alt="" />
+              <img className="img-fluid" src={springBanner} alt="" />
             </div>
           </div>
         </div>
