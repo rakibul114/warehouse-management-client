@@ -28,8 +28,12 @@ const BrandSlider = () => {
   };
   
   return (
-    <div>
-      <h1 className="text-center brands-title">OUR BRANDS</h1>
+    <div>      
+      <div className="d-flex justify-content-center align-items-center">
+        <div style={{ height: "1px" }} className="title-bar w-25 me-5"></div>
+        <h1 className="products-title text-center">OUR BRANDS</h1>
+        <div style={{ height: "1px" }} className="title-bar w-25 ms-5"></div>
+      </div>
       <div className="w-25 mx-auto mb-5 p-5">
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
@@ -83,8 +87,10 @@ const BrandSlider = () => {
           <Carousel.Item>
             <img className="d-block w-100" src={img13} alt="Thirteenth slide" />
           </Carousel.Item>
-          
         </Carousel>
+      </div>
+      <div>
+      
       </div>
     </div>
   );

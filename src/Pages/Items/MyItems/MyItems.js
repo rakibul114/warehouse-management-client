@@ -6,6 +6,7 @@ import { signOut } from 'firebase/auth';
 import axiosPrivate from '../../../api/axiosPrivate';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import './MyItems.css';
 
 
 const MyItems = () => {
@@ -15,12 +16,10 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user.email;
-      const url = `http://localhost:5000/myitem?email=${email}`;
-      console.log(url);
+      const url = `http://localhost:5000/myitem?email=${email}`;      
       try {
         const { data } = await axiosPrivate.get(url);
-        setItems(data);
-        console.log(data);
+        setItems(data);        
       } catch (error) {
         console.log(error.message);
         if (error.response.status === 401 || error.response.status === 403) {
@@ -40,8 +39,7 @@ const MyItems = () => {
       console.log(url);
       // Axios method
       axios.delete(url, items).then((response) => {
-        const { data } = response;
-        console.log(data);
+        const { data } = response;        
         const remaining = items.filter((item) => item._id !== id);
         setItems(remaining);
         if (data.deletedCount) {
@@ -53,9 +51,9 @@ const MyItems = () => {
 
   return (
     <div>
-      <h2 className='text-center'>Your items:</h2>
+      <h2 className='text-center'>Your items: {items.length}</h2>
       {items.map((item) => (
-        <div className="item-container d-flex w-75 mx-auto my-5">
+        <div className="item-container d-flex w-75 mx-auto my-5" key={item._id}>
           <div>
             <img height={100} src={item.image} alt="" />
           </div>

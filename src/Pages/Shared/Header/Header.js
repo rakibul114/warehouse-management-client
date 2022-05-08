@@ -18,7 +18,11 @@ const Header = () => {
 
     return (
       <div>
-        <Navbar className='py-4'
+        <div className="text-center discount-banner">
+          <h6 className='py-2'>UP TO 30% OFF DISCOUNT - خصم يصل ٥٠ بالمئه</h6>
+        </div>
+        <Navbar
+          className="py-4"
           collapseOnSelect
           expand="lg"
           bg="light"
@@ -29,7 +33,7 @@ const Header = () => {
             <Navbar.Brand as={Link} to="/">
               <div className="d-flex align-items-center justify-content-center">
                 <img height={40} src={logo} alt="" />{" "}
-                <span className="fs-1">Scentitude</span>
+                <span className="fs-1 logo-title">Scentitude</span>
               </div>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -91,7 +95,7 @@ const Header = () => {
                   <Nav.Link as={Link} to="/login" className="fs-5">
                     Login
                   </Nav.Link>
-                )}                
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>
