@@ -7,6 +7,8 @@ import axiosPrivate from "../../../api/axiosPrivate";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./MyItems.css";
+import { TrashIcon } from "@heroicons/react/solid";
+
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
@@ -67,9 +69,10 @@ const MyItems = () => {
             </div>
             <div className="button">
               <button
-                className="button-style px-3 py-1"
+                className="delete-button px-3 py-1"
                 onClick={() => handleDeleteItem(item._id)}
               >
+                <TrashIcon height={25} className="me-1 pb-1" />
                 DELETE
               </button>
             </div>

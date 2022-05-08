@@ -3,6 +3,7 @@ import useProducts from "../../../hooks/useProducts";
 import Product from "../Product/Product";
 import "./Products.css";
 
+
 const Products = () => {
   const [products] = useProducts();
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Products = () => {
           onClick={navigateToManageInventory}
           className="mt-5 button-style px-4 py-2"
         >
-          Manage Inventories
+          MANAGE INVENTORIES
         </button>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Product.css";
 
+
 const Product = (props) => {
   const { _id, name, picture, price, quantity, description, supplier } = props.product;
   const navigate = useNavigate();
@@ -17,7 +18,11 @@ const Product = (props) => {
           <img src={picture} className="card-img-top product-img" alt="..." />
           <div className="card-body">
             <h4 className="card-title">{name}</h4>
-            <p className="card-text">{description}</p>
+            <p className="card-text" title={description}>
+              {description.length > 20
+                ? description.slice(0, 230)
+                : description}...
+            </p>
             <p>
               <b>Price:</b> ${price}
             </p>
@@ -29,9 +34,9 @@ const Product = (props) => {
             </p>
             <button
               onClick={() => navigateToProductDetail(_id)}
-              className="button-style py-1 px-2"
+              className="button-style py-2 px-2"
             >
-              UPDATE
+              UPDATE STOCK
             </button>
           </div>
         </div>

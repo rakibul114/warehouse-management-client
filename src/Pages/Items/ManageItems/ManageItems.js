@@ -6,6 +6,9 @@ import "./ManageItems.css";
 // for toast
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { TrashIcon } from "@heroicons/react/solid";
+
+
 
 const ManageItems = () => {
   const [products, setProducts] = useProducts();
@@ -36,7 +39,7 @@ const ManageItems = () => {
   return (
     <div className="container my-5">
       <div>
-        <h2 className="text-center mb-5">MANAGE ITEMS</h2>
+        <h2 className="text-center mb-5">MANAGE ITEMS ({products.length} <small className="text-muted">stocks</small>)</h2>
         <div>
           <Table striped bordered hover style={{ borderColor: "#C1A260" }}>
             <thead>
@@ -62,6 +65,7 @@ const ManageItems = () => {
                       onClick={() => handleDelete(product._id)}
                       className="delete-button px-3 py-1"
                     >
+                      <TrashIcon height={25} className="me-1 pb-1" />
                       DELETE
                     </button>
                   </td>
@@ -73,7 +77,7 @@ const ManageItems = () => {
       </div>
       <div className="text-center mt-4">
         <button onClick={navigateToAddItem} className="button-style px-5 py-2">
-          Add New Item
+          ADD NEW ITEM
         </button>
       </div>
     </div>
