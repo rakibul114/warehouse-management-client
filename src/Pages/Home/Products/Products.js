@@ -27,7 +27,7 @@ const Products = () => {
       <div className="text-center">
         <button
           onClick={navigateToManageInventory}
-          className="mt-5 btn btn-primary"
+          className="mt-5 button-style px-4 py-2"
         >
           Manage Inventories
         </button>

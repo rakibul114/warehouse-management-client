@@ -67,7 +67,7 @@ const MyItems = () => {
             </div>
             <div className="button">
               <button
-                className="btn btn-primary"
+                className="button-style px-3 py-1"
                 onClick={() => handleDeleteItem(item._id)}
               >
                 DELETE

@@ -29,7 +29,7 @@ const Product = (props) => {
             </p>
             <button
               onClick={() => navigateToProductDetail(_id)}
-              className="btn btn-primary"
+              className="button-style py-1 px-2"
             >
               UPDATE
             </button>

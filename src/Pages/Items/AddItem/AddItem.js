@@ -45,7 +45,7 @@ const AddItem = () => {
 
   return (
     <div className="w-50 mx-auto">
-      <h1 className="text-center  mt-5 mb-3">Add an item</h1>
+      <h1 className="text-center  mt-5 mb-3">ADD ITEM</h1>
       <div className="form-container mb-5">
         <form
           className="d-flex flex-column w-100 mx-auto"
@@ -85,11 +85,14 @@ const AddItem = () => {
             type="text"
             {...register("supplier")}
           />
-          <input type="submit" value="Add Item" />
+          <input className="button-style py-1" type="submit" value="Add Item" />
         </form>
       </div>
       <div className="text-center">
-        <button className="btn btn-primary mb-5" onClick={navigateToManage}>
+        <button
+          className="button-style mb-5 px-4 py-1"
+          onClick={navigateToManage}
+        >
           Manage Items
         </button>
       </div>

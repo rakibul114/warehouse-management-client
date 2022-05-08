@@ -36,9 +36,9 @@ const ManageItems = () => {
   return (
     <div className="container my-5">
       <div>
-        <h2 className="text-center mb-5">Manage Items</h2>
+        <h2 className="text-center mb-5">MANAGE ITEMS</h2>
         <div>
-          <Table striped bordered hover>
+          <Table striped bordered hover style={{ borderColor: "#C1A260" }}>
             <thead>
               <tr>
                 <th>Product Name</th>
@@ -72,7 +72,7 @@ const ManageItems = () => {
         </div>
       </div>
       <div className="text-center mt-4">
-        <button onClick={navigateToAddItem} className="btn btn-primary px-5">
+        <button onClick={navigateToAddItem} className="button-style px-5 py-2">
           Add New Item
         </button>
       </div>

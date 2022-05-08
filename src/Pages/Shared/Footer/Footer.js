@@ -52,7 +52,7 @@ const Footer = () => {
                 id=""
                 placeholder="Phone"
               />
-              <button className="btn btn-primary d-flex ">SEND</button>
+              <button className="button-style text-white px-2 d-flex ">SEND</button>
             </form>
           </div>
           <div className="col">

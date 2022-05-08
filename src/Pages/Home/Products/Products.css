@@ -4,3 +4,14 @@
 .title-bar{
     border: 1px solid rgba(211, 211, 211, 0.685);
 }
+.button-style{
+    background-color: transparent;
+    border: 2px solid #C1A260;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.4s ease-in-out;
+}
+.button-style:hover{
+    background-color: #C1A260;
+    color: #fff;
+}
