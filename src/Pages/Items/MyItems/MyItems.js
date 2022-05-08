@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import axiosPrivate from '../../../api/axiosPrivate';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-import './MyItems.css';
-
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import axiosPrivate from "../../../api/axiosPrivate";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "./MyItems.css";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
@@ -16,10 +15,10 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user.email;
-      const url = `http://localhost:5000/myitem?email=${email}`;      
+      const url = `https://mighty-shelf-89768.herokuapp.com/myitem?email=${email}`;
       try {
         const { data } = await axiosPrivate.get(url);
-        setItems(data);        
+        setItems(data);
       } catch (error) {
         console.log(error.message);
         if (error.response.status === 401 || error.response.status === 403) {
@@ -35,11 +34,11 @@ const MyItems = () => {
   const handleDeleteItem = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/myitem/${id}`;
+      const url = `https://mighty-shelf-89768.herokuapp.com/myitem/${id}`;
       console.log(url);
       // Axios method
       axios.delete(url, items).then((response) => {
-        const { data } = response;        
+        const { data } = response;
         const remaining = items.filter((item) => item._id !== id);
         setItems(remaining);
         if (data.deletedCount) {
@@ -51,7 +50,7 @@ const MyItems = () => {
 
   return (
     <div>
-      <h2 className='text-center'>Your items: {items.length}</h2>
+      <h2 className="text-center">Your items: {items.length}</h2>
       {items.map((item) => (
         <div className="item-container d-flex w-75 mx-auto my-5" key={item._id}>
           <div>
