@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Website Name: Scentitude
 Description: This website is related to all men and women perfumes available all over the country.
 
-## Website link: Click [http://localhost:3000](http://localhost:3000) to view the website
+## Website link: Click [https://warehouse-management-9c24b.web.app/](https://warehouse-management-9c24b.web.app/) to view the website
 
 ## Website features:
 * Bootstrap carousal added for banner
