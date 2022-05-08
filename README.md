@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Website Name: Scentitude
+Description: This website is related to all men and women perfumes available all over the country.
+
+## Website link: Click [http://localhost:3000](http://localhost:3000) to view the website
+
+## Website features:
+* Bootstrap carousal added for banner
+* Six items displayed on the home page of the total number of perfumes
+* Displayed all brands on the home
+* Updated stock from home to manage items page
+* Adding new on the add item page info will be store on my items page
+
 ## Available Scripts
 
 In the project directory, you can run:
