@@ -11,6 +11,7 @@ import auth from "../../firebase.init";
 const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useProductDetail(productId);
+  
   const [user] = useAuthState(auth);
 
   const [addQuantity, setAddQuantity] = useState(1);
@@ -125,11 +126,14 @@ const ProductDetail = () => {
               {product.quantity === 0 ? "" : "pcs"}
             </small>
           </p>
-
           <p>
             <b>Supplier:</b> {product.supplier}
           </p>
-          <p>{product.description}</p>
+          <p className="card-text" title={product.description}>
+            {product.description}
+            ...
+          </p>
+          
         </div>
         <div className="text-center mt-4">
           <button onClick={handleUpdate} className="btn btn-success me-3">

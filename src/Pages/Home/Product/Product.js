@@ -19,9 +19,9 @@ const Product = (props) => {
           <div className="card-body">
             <h4 className="card-title">{name}</h4>
             <p className="card-text" title={description}>
-              {description.length > 20
+              {description.length >= 20
                 ? description.slice(0, 230)
-                : description}...
+                : description}
             </p>
             <p>
               <b>Price:</b> ${price}
